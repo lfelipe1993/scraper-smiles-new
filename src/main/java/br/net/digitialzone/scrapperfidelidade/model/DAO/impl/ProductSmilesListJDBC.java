@@ -151,7 +151,9 @@ public class ProductSmilesListJDBC implements ProductSmilesListDAO {
 		ResultSet rs = null;
 
 		try {
-			st = conn.prepareStatement("SELECT * FROM smiles_products WHERE ativo=1" + runParams.getVarejista().getSqlQuery());
+			st = conn.prepareStatement("SELECT * FROM smiles_products as SP "
+					+ " INNER JOIN products_models as PM ON PM.flag = SP.sigla"
+					+ " WHERE PM.ativo=1 AND SP.ativo=1" + runParams.getVarejista().getSqlQuery());
 
 			rs = st.executeQuery();
 

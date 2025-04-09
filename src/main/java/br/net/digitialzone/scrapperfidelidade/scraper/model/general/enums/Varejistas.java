@@ -1,11 +1,12 @@
 package br.net.digitialzone.scrapperfidelidade.scraper.model.general.enums;
 
 public enum Varejistas {
-	casasbahia(1, "casasbahia"," AND id_seller_produto = \"casasbahia\""),
-	extra(2, "extra"," AND id_seller_produto = \"extra\""),
-	magazineluiza(3, "magazineluiza"," AND id_seller_produto = \"magazineluiza\""),
-	pontofrio(4, "pontofrio"," AND id_seller_produto = \"pontofrio\""),
-	todos(5, "todos"," AND 1=1");
+	casasbahia(1, "casasbahia"," AND SP.id_seller_produto = \"casasbahia\""),
+	extra(2, "extra"," AND SP.id_seller_produto = \"extra\""),
+	magazineluiza(3, "magazineluiza"," AND SP.id_seller_produto = \"magazineluiza\""),
+	pontofrio(4, "pontofrio"," AND SP.id_seller_produto = \"pontofrio\""),
+	ontofrio(6, "fastshop"," AND SP.id_seller_produto = \"fastshop\""),
+	todos(7, "todos"," AND 1=1");
 
 	private Integer id;
 	private String name;

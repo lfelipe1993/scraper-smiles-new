@@ -35,14 +35,14 @@ public class Program {
 		Locale brasil = new Locale("pt", "BR");
 		Locale.setDefault(brasil);
 
-		//buscaProdutos();
+		//mainATT();
 		//System.exit(1);
 
 		RunParams runParams = new RunParams();
 
-		/*String[] argsTest = new String[2];
-		argsTest[0] = "programa=Smiles";
-		argsTest[1] = "varejista=magazineluiza";*/
+		//String[] argsTest = new String[1];
+		//argsTest[0] = "programa=Smiles";
+		//argsTest[1] = "varejista=magazineluiza";
 
 		List<String> params = Arrays.asList(args);
 
@@ -64,6 +64,8 @@ public class Program {
 					runParams.setVarejista("pontofrio");
 				}else if (teste[0].equalsIgnoreCase("varejista") && teste[1].equalsIgnoreCase("magazineluiza")) {
 					runParams.setVarejista("magazineluiza");
+				}else if (teste[0].equalsIgnoreCase("varejista") && teste[1].equalsIgnoreCase("fastshop")) {
+					runParams.setVarejista("fastshop");
 				}
 			}
 		});
