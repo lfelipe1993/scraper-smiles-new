@@ -73,6 +73,7 @@ public class Program {
 		Scraper.Scraping(runParams);
 
 		runParams.getAlertaView().setProgram(runParams.getProgram());
+		runParams.getAlertaView().setVarejista(runParams.getVarejista().getName());
 		if (runParams.getAlertaView() != null && !runParams.getAlertaView().getDadosView().isEmpty()) {
 
 			String msgTelegramFinal = runParams.getAlertaView().toString();
