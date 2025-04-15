@@ -56,8 +56,8 @@ public abstract class AlertaView {
 		String EmojiVoltage = "%E2%9A%A1";
 
 		builder.append(EmojiVoltage + " [ <b>" + program.getProgramName().toUpperCase() + "</b>] " + EmojiVoltage);
-		builder.append("\n <b>PREÇO MILHAR: " + Utilidades.formatPrice(program.getMilesValue()) + "</b> \n\n");
-		builder.append("\n <b>VAREJISTA: [" + getVarejista().getName().toLowerCase() + "]</b> \n\n");
+		builder.append("\n <b>PREÇO MILHAR: " + Utilidades.formatPrice(program.getMilesValue()) + "</b>");
+		builder.append("\n <b>VAREJISTA: [" + getVarejista().getName().toUpperCase() + "]</b> \n");
 		dadosView.forEach(x -> {
 			builder.append(x);
 		});
